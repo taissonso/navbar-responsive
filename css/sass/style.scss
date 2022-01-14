@@ -6,6 +6,7 @@
 
 ///* CORES * ///  
 $branco: #ffffff;
+$preto: #000000;
 $fundo-menu: rgb(182, 182, 182);
 nav {
     width: 100vw;
@@ -46,6 +47,7 @@ nav {
             
             &:hover {
                 cursor: pointer;
+                color: $preto;
             }
 
             a {
@@ -85,6 +87,7 @@ nav {
                 flex-direction: column;
                 position: absolute;
                 top: 50px;
+                color: $preto;
             }
 
         }
