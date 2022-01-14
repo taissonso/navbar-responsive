@@ -27,6 +27,7 @@ nav {
       color: #ffffff;
       font-size: 18px;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-weight: 400;
       letter-spacing: 1px;
       width: 100px;
       display: flex;
@@ -49,13 +50,17 @@ nav {
         padding: 10px 5px;
         background-color: grey;
         width: 250px; }
+        nav .links-menu .dropdown .submenu li:hover {
+          background-color: #0954f5;
+          color: #000000; }
+        nav .links-menu .dropdown .submenu li:hover a {
+          color: #000000; }
       nav .links-menu .dropdown .submenu li:first-child {
         margin-top: 30px; }
     nav .links-menu .dropdown:hover .submenu {
       display: flex;
       flex-direction: column;
       position: absolute;
-      top: 50px;
-      color: #000000; }
+      top: 50px; }
 
 /*# sourceMappingURL=style.css.map */
