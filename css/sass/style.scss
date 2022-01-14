@@ -6,8 +6,7 @@
 
 ///* CORES * ///  
 $branco: #ffffff;
-$azul: blue;
-$fundo-menu: rgb(141, 141, 141);
+$fundo-menu: rgb(182, 182, 182);
 nav {
     width: 100vw;
     background-color: $fundo-menu;
@@ -31,7 +30,7 @@ nav {
         width: 40vw;
         display: flex;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-right: 25vw;
         list-style-type: none;
         
@@ -40,10 +39,13 @@ nav {
             font-size: 18px;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
             letter-spacing: 1px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             
             &:hover {
                 cursor: pointer;
-                color: blue;
             }
 
             a {
@@ -51,40 +53,38 @@ nav {
                 text-decoration: none;
 
                 &:hover {
-                    color: $azul;
+                    color: #000000;
                 }
             }
         }
 
         .dropdown {
-            background-color: red;
-            
+           
+            .flecha {
+                font-size: 14px;
+            }
+
             .submenu {
                 display: none;
-                position: absolute;
-                // top: 100px;
                 list-style-type: none;
-                background-color: violet;
-
-
-
+                
                 li {
-                    background-color: green;
+                    padding: 10px 5px;
+                    background-color: grey;
                     width: 250px;
-                    // padding: 30px;
                 }
 
                 li:first-child {
-                    background-color: blue;
-                    // padding-top: 28px;
-                    margin-top: 28px;
+                    margin-top: 30px;
                 } 
 
             }
 
             &:hover .submenu {
-                display: block;
-                // position: relative;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
             }
 
         }
