@@ -1,204 +1,119 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 
 ///* CORES * ///  
 $branco: #ffffff;
 $azul: #0954f5;
 $preto: #000000;
 $fundo-menu: rgb(182, 182, 182);
-
+$section-1: rgb(107, 107, 107);
+$section-2: rgb(51, 50, 50);
 
 ///* Tamanho das telas *///
 $tablet: 1023px;
 $mobile: 768px;
 
-nav {
-    width: 100vw;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
     background-color: $fundo-menu;
+    width: 100vw;
     height: 80px;
     position: fixed;
-    top: 0;
-
     display: flex;
     align-items: center;
-    justify-content: space-between;
+
+    .menu, .fechar {
+       display: none;
+       position: absolute;
+       right: 25px;
+       top: 30px;
+    }
 
     img {
         width: 150px;
-        height: 80%;
-        margin-left: 50px;
-
-        &:hover {
-            cursor: pointer;
-        }
+        height: 60px;
+        position: relative;
+        left: 50px;
     }
 
-    .links-menu {
-        width: 40vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        margin-right: 25vw;
-        list-style-type: none;
-        
-        li {
-            color: #ffffff;
-            font-size: 18px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
-            font-weight: 400;
-            letter-spacing: 1px;
-            width: 100px;
+    nav {
+        margin: auto;
+        width: 50vw;
+        background-color: red;
+        // justify-content: space-between;
+        // background-color: red;
+        .links-menu {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            list-style-type: none;
             
-            &:hover {
-                color: $preto;
-            }
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                // width: 150px;
+                height: 50px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-weight: 400;
+                letter-spacing: 1px; 
 
-            a {
-                color: $branco;
-                text-decoration: none;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
 
                 &:hover {
-                    color: $preto;
+                    background-color: $preto;
                 }
             }
-        }
 
-        .dropdown {
-           
-            .flecha {
-                font-size: 14px;
-            }
+            .dropdown {
+                .submenu {
+                    display: none;
+                    // position: absolute;
+                    top: 50px;
+                    background-color: $preto;
+                    list-style-type: none;
+                    
 
-            .submenu {
-                display: none;
-                list-style-type: none;
-                
-                li {
-                    padding: 10px 5px;
-                    background-color: grey;
-                    width: 250px;
-
-                    &:hover {
-                        background-color: $azul;
-                        color: $preto;
+                    li {
+                        width: 200px;
+                        background-color: red;
                     }
 
-                    &:hover a {
-                        color: $preto;
+                    li:first-child {
+                        margin-top: 30px;
+                        // background-color: red;
+                    } 
+
+                    li:hover {
+                        background-color: $fundo-menu;
                     }
                 }
 
-                ///*Deixando uma distância para o submenu abrir abaixo do menu*////
-                li:first-child {
-                    margin-top: 30px;
-                } 
-
+                &:hover .submenu {
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    cursor: pointer;
+                }
+               
             }
-
-            &:hover .submenu {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: 50px;
-                cursor: pointer;
-            }
-
-            &:hover {
-                cursor: pointer;
-            }
-
-        }
-    }
-
-    .menu {
-        position: relative;
-        right: 50px;
-        font-size: 32px;
-        color: white;
-        display: none;
-
-        &:hover {
-            cursor: pointer;
-            color: pink;
-        }
-    }
-
-    .fechar {
-        display: none;
-        position: relative;
-        right: 50px;
-        font-size: 32px;
-        color: white;
-
-        &:hover {
-            cursor: pointer;
-            color: pink;
+            
         }
     }
 }
 
-.section-1 {
-    background-color: blueviolet;
-    max-width: 100%;
+.section-1, .section-2 {
     height: 100vh;
-
+    width: 100%;
+    background-color: $section-1;
 }
 
 .section-2 {
-    background-color: orangered;
-    max-width: 100%;
-    height: 100vh;
-
-}
- 
-@media screen and (min-width: $mobile) and (max-width: $tablet){
-    nav {
-        background-color: $azul;
-        .links-menu {
-            display: none;
-        }
-
-        .menu {
-            display: flex;
-        }
-    }
-}
-
-@media screen and (max-width: $mobile) {
-    nav {
-        background-color: $preto;
-        .links-menu {
-            display: none;
-        }
-
-        img {
-            margin-left: 25px;
-            height: 80%;
-            width: 100px;
-        }
-
-        .menu {
-            display: flex;
-            right: 20px;
-        }
-
-        .fechar {
-            display: none;
-            right: 20px;
-        }
-
-        .active {
-            display: none;
-        }
-
-        .open {
-            display: flex;
-        }
-    }
+    background-color: $section-2;
 }

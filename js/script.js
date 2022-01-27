@@ -8,10 +8,14 @@ onload = () => {
     function abrirMenu () {
         this.classList.add("active");
         document.querySelector('.fechar').classList.add('open');
+        document.querySelector('nav').classList.add('menu-mobile');
     }
 
     function fecharMenu () {
         this.classList.remove('open');
         document.querySelector('.menu').classList.remove('active');
+        document.querySelector('nav').classList.remove('menu-mobile');
     }
 }
+
+
